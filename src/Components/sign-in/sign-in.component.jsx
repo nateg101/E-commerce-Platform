@@ -15,7 +15,9 @@ const SignIn = () => {
 
     const handleChange = event => {
         const {value, name } = event.target
-        setEmailAndPassword({ [name]: value })
+        setEmailAndPassword(prevEmailAndPassowrd => {
+            return {...prevEmailAndPassowrd, [name]: value}
+        })
     }
 
     return (
