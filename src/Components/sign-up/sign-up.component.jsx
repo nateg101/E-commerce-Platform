@@ -24,8 +24,9 @@ const SignUp = () => {
 
         try{
             const { user } = await auth.createUserWithEmailAndPassword(signUpDetails.email, signUpDetails.password);
+            const displayName = signUpDetails.displayName
 
-            await createUserProfileDocument(user, signUpDetails.displayName);
+            await createUserProfileDocument(user, { displayName } );
             changeSignUpDetails({
                 displayName: '',
                 email: '',
