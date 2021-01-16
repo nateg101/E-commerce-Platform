@@ -7,6 +7,8 @@ import Homepage from './Pages/Homepage/homepage.component';
 import ShopPage from './Pages/Shop/shop.component';
 import Header from './Components/header/header.component';
 import SignInAndSignUpPage from './Pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
+import CheckoutPage from './Pages/Checkout/checkout.component';
+
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './Redux/user/user.actions'
 import { selectCurrentUser } from './Redux/user/user.selector'
@@ -43,6 +45,7 @@ function App({ setCurrentUser, currentUser }) {
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route path='/shop' component={ShopPage} />
+        <Route exact path='/checkout' component={CheckoutPage} />
         <Route exact path='/signin' 
         render={() => currentUser ? 
           (<Redirect to='/' />
