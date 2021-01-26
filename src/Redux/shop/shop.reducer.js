@@ -11,4 +11,4 @@ const shopReducer = (state = INITIAL_STATE, action) => {
     }
 }
 
-default export shopReducer
+export default shopReducer
