@@ -8,7 +8,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectCartHidden } from '../../Redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../Redux/user/user.selector';
-import './header.style.scss';
 import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, OptionDiv } from './header.styles'
 
 const Header = ({ currentUser, hidden }) => (
