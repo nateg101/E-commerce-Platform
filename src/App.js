@@ -37,7 +37,7 @@ function App({ setCurrentUser, currentUser }) {
     return () => {
       unsubscribe();
     }
-  }, [])
+  })
 
   return(
     <div>
