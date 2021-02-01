@@ -25,7 +25,11 @@ const ShopPage = ({ match, updateCollections }) => {
             updateCollections(collectionsMap)
             setLoading(false);
         })
-    })
+
+        return () => {
+            setLoading(true);
+        }
+    },[updateCollections])
 
     return (
         <div className='shop-page'>
